@@ -1,9 +1,6 @@
-# test_data
-50 Handwritten digits to be used to test validate a number image recognition model
-
 # Loading the Handwritten Digits Dataset
 
-This README provides instructions on how to load the handwritten digits dataset stored as a pickled file (`digits_shuffled.pkl`) from a GitHub repository. This dataset contains images of digits (0-9) that have been processed and are ready for use in machine learning models, particularly for MNIST-like tasks.
+This README provides instructions on how to load the handwritten digits dataset stored as a pickled file (`digits_shuffled.pkl`) from the GitHub repository located at [https://github.com/Qamata/test_data/blob/main/digits_shuffled.pkl](https://github.com/Qamata/test_data/blob/main/digits_shuffled.pkl). This dataset contains images of digits (0-9) that have been processed and are ready for use in machine learning models, particularly for MNIST-like tasks.
 
 ## Prerequisites
 
@@ -24,13 +21,13 @@ This README provides instructions on how to load the handwritten digits dataset 
 Follow these steps to load the dataset into your Python environment:
 
 1.  **Get the Raw URL of the `.pkl` File:**
-    * Navigate to the location of the `digits_shuffled.pkl` file in the GitHub repository where it is stored.
-    * Click on the filename to view its contents (which will likely appear as gibberish since it's a binary file).
+    * Navigate to the file at [https://github.com/Qamata/test\_data/blob/main/digits\_shuffled.pkl](https://github.com/Qamata/test_data/blob/main/digits_shuffled.pkl) in your web browser.
+    * Click on the filename (`digits_shuffled.pkl`). This will open the file content in the GitHub viewer (which will likely appear as gibberish since it's a binary file).
     * Look for the "Raw" button (usually on the right side of the file view).
     * Click the "Raw" button. This will open the raw binary content of the file in your browser.
-    * **Copy the URL** from the address bar of your browser. This is the raw URL you will use in the Python script. It should look something like:
+    * **Copy the URL** from the address bar of your browser. This is the raw URL you will use in the Python script. It should look like:
         ```
-        [https://raw.githubusercontent.com/Qamata/test_data/main/path/to/digits_shuffled.pkl](https://raw.githubusercontent.com/your_username/your_repository/main/path/to/digits_shuffled.pkl)
+        [https://raw.githubusercontent.com/Qamata/test_data/main/digits_shuffled.pkl](https://raw.githubusercontent.com/Qamata/test_data/main/digits_shuffled.pkl)
         ```
         **Make sure it starts with `https://raw.githubusercontent.com/`.**
 
@@ -43,7 +40,7 @@ Follow these steps to load the dataset into your Python environment:
     from io import BytesIO
 
     # Replace with the raw URL of your .pkl file on GitHub
-    pkl_url = "YOUR_RAW_GITHUB_PKL_URL_HERE"
+    pkl_url = "[https://raw.githubusercontent.com/Qamata/test_data/main/digits_shuffled.pkl](https://raw.githubusercontent.com/Qamata/test_data/main/digits_shuffled.pkl)"
 
     try:
         response = requests.get(pkl_url)
@@ -71,9 +68,9 @@ Follow these steps to load the dataset into your Python environment:
         print(f"An unexpected error occurred: {e}")
     ```
 
-3.  **Replace Placeholder URL:** Make sure to replace `"YOUR_RAW_GITHUB_PKL_URL_HERE"` in the Python code with the actual raw URL you copied in step 1.
+3.  **No Need to Replace Placeholder URL:** The `pkl_url` variable in the provided code is already set to the correct raw URL for your `digits_shuffled.pkl` file.
 
-4.  **Run the Script:** Execute the Python script. If the URL is correct and the network connection is stable, the script will download the `.pkl` file, load the data, and print the shapes of the loaded image data and labels, along with an example.
+4.  **Run the Script:** Execute the Python script. If your internet connection is stable, the script will download the `.pkl` file, load the data, and print the shapes of the loaded image data and labels, along with an example.
 
 ## Data Format
 
@@ -88,9 +85,8 @@ After successfully loading the data, you can use `loaded_X` and `loaded_y` to tr
 
 ## Troubleshooting
 
-* **Incorrect Raw URL:** Double-check that you have copied the **raw** URL of the `.pkl` file from GitHub. The URL should start with `https://raw.githubusercontent.com/`.
 * **Network Issues:** Ensure you have a stable internet connection to download the file.
-* **File Not Found (404 Error):** Verify that the `.pkl` file exists at the specified path in your GitHub repository and that the URL is correctly typed.
+* **File Not Found (404 Error):** Verify that the `.pkl` file still exists at the specified path in your GitHub repository and that the URL is correctly typed.
 * **Pickle Errors:** If you encounter `pickle.PickleError`, it might indicate that the file is corrupted or was created with a different version of Python's `pickle` module. Ensure the file was uploaded correctly and try loading it with the same Python version used for saving.
 
 By following these instructions, you should be able to easily load the handwritten digits dataset from the provided GitHub URL.
