@@ -30,7 +30,7 @@ Follow these steps to load the dataset into your Python environment:
     * Click the "Raw" button. This will open the raw binary content of the file in your browser.
     * **Copy the URL** from the address bar of your browser. This is the raw URL you will use in the Python script. It should look something like:
         ```
-        [https://raw.githubusercontent.com/your_username/your_repository/main/path/to/digits_shuffled.pkl](https://raw.githubusercontent.com/your_username/your_repository/main/path/to/digits_shuffled.pkl)
+        [https://raw.githubusercontent.com/Qamata/test_data/main/path/to/digits_shuffled.pkl](https://raw.githubusercontent.com/your_username/your_repository/main/path/to/digits_shuffled.pkl)
         ```
         **Make sure it starts with `https://raw.githubusercontent.com/`.**
 
